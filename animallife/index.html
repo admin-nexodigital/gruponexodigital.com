@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Veterinario Animal Life | Zona 10, Guatemala — Atención 24/7</title>
+<meta name="description" content="Hospital veterinario en Zona 10, Guatemala. Dermatología, cirugía, grooming premium y pet shop. Cotiza, consulta stock y agenda por WhatsApp con respuesta automática 24/7.">
+<meta name="theme-color" content="#14201C">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hospital Veterinario Animal Life | Zona 10">
+<meta property="og:description" content="Medicina especializada, grooming y pet shop en Zona 10. Atención por WhatsApp 24/7 con respuesta automática instantánea.">
+<meta property="og:locale" content="es_GT">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (inline) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317533D'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23DB7C2A' text-anchor='middle' font-style='italic'%3E*%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data: helps Google show the clinic in local results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Hospital Veterinario Animal Life",
+  "description": "Hospital veterinario en Zona 10, Guatemala. Dermatología, cirugía, grooming y pet shop con atención por WhatsApp 24/7.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 Avenida A 20-23, Zona 10",
+    "addressLocality": "Ciudad de Guatemala",
+    "addressCountry": "GT"
+  },
+  "areaServed": "Ciudad de Guatemala",
+  "medicalSpecialty": ["Dermatology", "Surgical"],
+  "openingHours": "Mo-Su 00:00-23:59",
+  "telephone": "+502-0000-0000"
+}
+</script>
+
+<style>
+:root {
+  --paper:      #F7F5EF;
+  --paper-2:    #EFEDE4;
+  --paper-3:    #E6E3D7;
+  --ink:        #14201C;
+  --ink-soft:   #58655E;
+  --emerald:    #17533D;
+  --emerald-2:  #0F3D2C;
+  --emerald-3:  #1E6B4E;
+  --amber:      #DB7C2A;
+  --amber-soft: #F4E7D4;
+  --line:       rgba(20,32,28,0.10);
+  --line-2:     rgba(20,32,28,0.16);
+  --wa:         #25D366;
+  --shadow:     0 18px 50px -22px rgba(15,40,30,0.45);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--paper); -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fine paper grain — restrained */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  opacity: 0.04; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection { background: var(--emerald); color: var(--paper); }
+:focus-visible { outline: 2.5px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  letter-spacing: -0.018em; line-height: 1.04; color: var(--ink);
+}
+.it { font-style: italic; font-weight: 400; color: var(--emerald); }
+
+.kicker {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 2.5px; color: var(--amber);
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px;
+}
+.kicker::before { content: ''; width: 16px; height: 1px; background: var(--amber); }
+
+/* ─────────── Emergency top bar ─────────── */
+.emergency {
+  background: var(--ink); color: var(--paper);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.4px;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding: 8px 16px; position: relative; z-index: 1100; text-align: center;
+}
+.emergency .pulse {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--amber);
+  box-shadow: 0 0 0 0 rgba(219,124,42,0.7); animation: ring 2s infinite;
+}
+.emergency a { color: var(--amber); text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; }
+.emergency a:hover { border-color: var(--amber); }
+@keyframes ring {
+  0% { box-shadow: 0 0 0 0 rgba(219,124,42,0.6); }
+  70% { box-shadow: 0 0 0 7px rgba(219,124,42,0); }
+  100% { box-shadow: 0 0 0 0 rgba(219,124,42,0); }
+}
+
+/* ─────────── Nav ─────────── */
+nav {
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px; padding: 0 28px;
+  background: rgba(247,245,239,0.86); backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  font-family: 'Fraunces', serif; font-weight: 600; font-size: 23px;
+  color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 2px; letter-spacing: -0.01em;
+}
+.logo .ast { color: var(--amber); font-style: italic; font-weight: 500; padding: 0 1px; }
+.nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+.nav-links a {
+  font-size: 14px; color: var(--ink-soft); text-decoration: none; font-weight: 500;
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:not(.nav-cta):hover { color: var(--ink); }
+.nav-links a:not(.nav-cta)::after {
+  content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 1.5px;
+  background: var(--amber); transition: width 0.25s;
+}
+.nav-links a:not(.nav-cta):hover::after { width: 100%; }
+.nav-cta {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500;
+  color: var(--paper); background: var(--emerald); padding: 11px 18px; border-radius: 99px;
+  letter-spacing: 0.6px; transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px;
+}
+.nav-cta:hover { background: var(--emerald-2); transform: translateY(-1px); }
+.nav-cta svg { width: 15px; height: 15px; }
+
+.burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.burger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: 0.3s; }
+.burger span + span { margin-top: 5px; }
+
+/* ─────────── Hero ─────────── */
+.hero { position: relative; padding: 110px 0 70px; }
+.hero-inner { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.h1 { font-size: clamp(44px, 7.4vw, 96px); max-width: 15ch; margin-bottom: 28px; font-weight: 500; }
+.h1 .stroke { -webkit-text-stroke: 1.2px var(--ink); color: transparent; }
+.hero-sub { font-size: clamp(17px, 2vw, 20px); color: var(--ink-soft); max-width: 52ch; margin-bottom: 36px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 44px; }
+
+.btn {
+  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500;
+  text-decoration: none; padding: 16px 26px; border-radius: 99px; cursor: pointer; border: none;
+  text-transform: uppercase; letter-spacing: 0.8px; transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-pri { background: var(--emerald); color: var(--paper); }
+.btn-pri:hover { background: var(--emerald-2); transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn-pri svg { width: 16px; height: 16px; }
+.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line-2); }
+.btn-ghost:hover { border-color: var(--ink); background: var(--paper-2); }
+
+.trust-row { display: flex; flex-wrap: wrap; gap: 26px; align-items: center; }
+.trust-item { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--ink-soft); }
+.trust-item svg { width: 17px; height: 17px; color: var(--emerald); flex-shrink: 0; }
+.trust-sep { width: 1px; height: 16px; background: var(--line-2); }
+
+/* ─────────── Ticker ─────────── */
+.ticker {
+  background: var(--ink); color: var(--paper); overflow: hidden; padding: 18px 0; margin-top: 10px;
+}
+.ticker-track {
+  display: flex; gap: 56px; width: max-content;
+  animation: tick 32s linear infinite;
+  font-family: 'Fraunces', serif; font-style: italic; font-size: 21px; white-space: nowrap;
+}
+.ticker-track span { display: flex; align-items: center; gap: 56px; }
+.ticker-track i { color: var(--amber); font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* ─────────── Section shell ─────────── */
+.section { padding: 100px 0; }
+.section-tight { padding: 70px 0; }
+.shead { margin-bottom: 56px; max-width: 760px; }
+.shead h2 { font-size: clamp(32px, 4.6vw, 58px); margin-bottom: 18px; }
+.shead p { color: var(--ink-soft); font-size: 18px; }
+
+/* ─────────── ★ Bot demo (signature) ─────────── */
+.demo { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.demo-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
+.demo-copy h2 { font-size: clamp(30px, 4vw, 50px); margin-bottom: 20px; }
+.demo-copy > p { color: var(--ink-soft); font-size: 17.5px; margin-bottom: 28px; max-width: 46ch; }
+.demo-feat { display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px; }
+.demo-feat-item { display: flex; gap: 14px; align-items: flex-start; }
+.demo-feat-item .ic {
+  width: 38px; height: 38px; border-radius: 11px; flex-shrink: 0;
+  background: var(--paper); border: 1px solid var(--line); display: grid; place-items: center; font-size: 18px;
+}
+.demo-feat-item b { font-family: 'Fraunces', serif; font-weight: 500; font-size: 17px; display: block; margin-bottom: 2px; }
+.demo-feat-item p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.5; }
+.demo-note { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-soft); letter-spacing: 0.3px; }
+
+/* Phone mock */
+.phone {
+  width: 340px; max-width: 100%; margin: 0 auto;
+  background: #0b0f0d; border-radius: 42px; padding: 11px;
+  box-shadow: var(--shadow), 0 0 0 1px rgba(0,0,0,0.06);
+  position: relative;
+}
+.phone::before { /* notch */
+  content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 24px; background: #0b0f0d; border-radius: 0 0 16px 16px; z-index: 5;
+}
+.screen {
+  background: #E7DDD3; border-radius: 32px; overflow: hidden; height: 600px;
+  display: flex; flex-direction: column; position: relative;
+}
+/* WA chat header */
+.wa-head {
+  background: var(--emerald); color: #fff; padding: 38px 16px 12px; display: flex; align-items: center; gap: 12px;
+}
+.wa-avatar {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--paper);
+  display: grid; place-items: center; font-family: 'Fraunces', serif; font-weight: 600; color: var(--emerald); font-size: 19px; font-style: italic;
+}
+.wa-name { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; line-height: 1.2; }
+.wa-status { font-size: 11.5px; opacity: 0.85; display: flex; align-items: center; gap: 5px; }
+.wa-status .on { width: 6px; height: 6px; border-radius: 50%; background: #7CF0A8; }
+.wa-body {
+  flex: 1; overflow-y: auto; padding: 16px 14px; display: flex; flex-direction: column; gap: 9px;
+  background-color: #E7DDD3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='%23000' fill-opacity='0.025'%3E%3Cpath d='M30 10c2 4 6 6 10 6-4 2-6 6-6 10-2-4-6-6-10-6 4-2 6-6 6-10z'/%3E%3C/g%3E%3C/svg%3E");
+  scroll-behavior: smooth;
+}
+.wa-body::-webkit-scrollbar { width: 0; }
+.bubble {
+  max-width: 80%; padding: 8px 11px; border-radius: 12px; font-size: 13.5px; line-height: 1.45;
+  font-family: 'DM Sans', sans-serif; color: #0d1c16; position: relative;
+  animation: pop 0.3s ease both; box-shadow: 0 1px 1px rgba(0,0,0,0.06);
+}
+@keyframes pop { from { opacity: 0; transform: translateY(6px) scale(0.98); } to { opacity: 1; transform: none; } }
+.bubble.bot { align-self: flex-start; background: #fff; border-top-left-radius: 3px; }
+.bubble.user { align-self: flex-end; background: #DCF8C6; border-top-right-radius: 3px; }
+.bubble .time { font-size: 9.5px; color: rgba(0,0,0,0.4); display: block; text-align: right; margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
+.bubble.user .time::after { content: ' ✓✓'; color: #4FC3F7; }
+.bubble b { font-weight: 600; }
+.bubble .price { color: var(--emerald); font-weight: 600; }
+.typing { align-self: flex-start; background: #fff; padding: 11px 14px; border-radius: 12px; border-top-left-radius: 3px; display: inline-flex; gap: 4px; }
+.typing span { width: 6px; height: 6px; border-radius: 50%; background: #9aa39e; animation: blink 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
+/* quick replies */
+.wa-replies {
+  padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 7px; background: #E7DDD3;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.chip-reply {
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+  background: #fff; color: var(--emerald); border: 1px solid rgba(23,83,61,0.25);
+  padding: 7px 12px; border-radius: 99px; cursor: pointer; transition: all 0.18s;
+}
+.chip-reply:hover { background: var(--emerald); color: #fff; }
+.chip-reply.muted { color: var(--ink-soft); border-color: var(--line-2); }
+.chip-reply.muted:hover { background: var(--ink); color: #fff; }
+
+/* ─────────── Servicios ─────────── */
+.svc-item {
+  display: grid; grid-template-columns: 70px 1.3fr 2fr; gap: 28px;
+  padding: 38px 0; border-top: 1px solid var(--line); align-items: start;
+}
+.svc-item:last-child { border-bottom: 1px solid var(--line); }
+.svc-num { font-family: 'Fraunces', serif; font-style: italic; font-size: 38px; color: var(--amber); line-height: 1; }
+.svc-title h3 { font-size: 27px; }
+.svc-detail p { color: var(--ink-soft); margin-bottom: 16px; }
+.chip {
+  display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  padding: 6px 13px; border-radius: 99px; border: 1px solid var(--line-2); margin: 0 5px 7px 0; color: var(--ink-soft);
+}
+.bot-status {
+  display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.6px; color: var(--emerald); background: var(--paper-3);
+  padding: 7px 14px; border-radius: 99px; margin-bottom: 14px;
+}
+.bot-status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--emerald-3); box-shadow: 0 0 8px var(--emerald-3); animation: blink2 2s infinite; }
+@keyframes blink2 { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+/* ─────────── Shift table ─────────── */
+.shift { background: var(--ink); color: var(--paper); }
+.shift .shead h2 { color: var(--paper); }
+.shift .shead p { color: rgba(247,245,239,0.65); }
+.shift .kicker { color: var(--amber); }
+.shift-tbl {
+  display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(247,245,239,0.14);
+  border-radius: 14px; overflow: hidden;
+}
+.shift-col { padding: 38px; }
+.shift-col.before { background: rgba(247,245,239,0.04); border-right: 1px solid rgba(247,245,239,0.14); }
+.shift-h { font-family: 'Fraunces', serif; font-size: 23px; margin-bottom: 22px; color: var(--paper); }
+.shift-h .it { color: var(--amber); }
+.shift-li { display: flex; gap: 14px; padding: 13px 0; font-size: 15.5px; border-bottom: 1px dotted rgba(247,245,239,0.16); color: rgba(247,245,239,0.85); }
+.shift-li:last-child { border-bottom: none; }
+.shift-li .mk { font-family: 'JetBrains Mono', monospace; font-weight: bold; flex-shrink: 0; }
+.before .mk { color: rgba(247,245,239,0.4); }
+.after .mk { color: var(--amber); }
+
+/* ─────────── Equipo ─────────── */
+.team-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center; }
+.doc-card {
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; padding: 40px;
+  position: relative; overflow: hidden;
+}
+.doc-card::before {
+  content: '✦'; position: absolute; top: -10px; right: 18px; font-size: 120px;
+  color: var(--amber); opacity: 0.08; font-family: 'JetBrains Mono', monospace;
+}
+.doc-photo {
+  width: 84px; height: 84px; border-radius: 50%; background: var(--emerald);
+  display: grid; place-items: center; font-family: 'Fraunces', serif; font-style: italic;
+  color: var(--paper); font-size: 34px; margin-bottom: 22px;
+}
+.doc-card h3 { font-size: 27px; margin-bottom: 4px; }
+.doc-role { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--amber); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+.doc-card p { color: var(--ink-soft); font-size: 15px; }
+.team-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.stat { padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+.stat-n { font-family: 'Fraunces', serif; font-size: 40px; color: var(--emerald); line-height: 1; margin-bottom: 8px; }
+.stat-l { font-size: 13.5px; color: var(--ink-soft); }
+
+/* ─────────── FAQ ─────────── */
+.faq-grid { max-width: 800px; }
+.faq-item { border-top: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  padding: 26px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  font-family: 'Fraunces', serif; font-size: 20px; color: var(--ink); font-weight: 500;
+}
+.faq-q .pm { font-family: 'JetBrains Mono', monospace; font-size: 22px; color: var(--amber); transition: transform 0.3s; flex-shrink: 0; }
+.faq-item.open .faq-q .pm { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-a-inner { padding: 0 0 26px; color: var(--ink-soft); font-size: 16px; max-width: 64ch; }
+.faq-item.open .faq-a { max-height: 320px; }
+
+/* ─────────── Contacto ─────────── */
+.contact { background: var(--paper-2); border-top: 1px solid var(--line); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 50px; align-items: stretch; }
+.contact-info { display: flex; flex-direction: column; gap: 22px; }
+.info-block {
+  display: flex; gap: 16px; align-items: flex-start; padding: 22px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px; transition: all 0.2s;
+  text-decoration: none; color: inherit;
+}
+a.info-block:hover { border-color: var(--line-2); transform: translateY(-2px); box-shadow: var(--shadow); }
+.info-ic { width: 42px; height: 42px; border-radius: 11px; background: var(--paper-3); display: grid; place-items: center; flex-shrink: 0; }
+.info-ic svg { width: 20px; height: 20px; color: var(--emerald); }
+.info-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); margin-bottom: 4px; }
+.info-val { font-family: 'Fraunces', serif; font-size: 18px; color: var(--ink); font-weight: 500; }
+.info-sub { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+.hours-table { width: 100%; font-size: 14px; }
+.hours-table tr { border-bottom: 1px dotted var(--line); }
+.hours-table td { padding: 7px 0; color: var(--ink-soft); }
+.hours-table td:last-child { text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--ink); }
+.hours-table .em td:last-child { color: var(--emerald); font-weight: 500; }
+.map-box { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); min-height: 420px; position: relative; }
+.map-box iframe { width: 100%; height: 100%; border: 0; min-height: 420px; filter: grayscale(0.25) contrast(1.05); }
+.map-pin-note { position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(20,32,28,0.9); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; padding: 8px 12px; border-radius: 8px; letter-spacing: 0.3px; }
+
+/* ─────────── Footer ─────────── */
+footer { background: var(--ink); color: var(--paper); padding: 60px 0 36px; text-align: center; }
+footer .logo { color: var(--paper); margin-bottom: 14px; display: inline-flex; justify-content: center; }
+footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 28px; }
+.f-credit {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(247,245,239,0.55);
+  padding-top: 24px; border-top: 1px solid rgba(247,245,239,0.12); display: inline-block; margin-top: 8px;
+}
+.f-credit a { color: var(--amber); text-decoration: none; }
+.f-credit a:hover { text-decoration: underline; }
+
+/* ─────────── Reveal on scroll ─────────── */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ─────────── Floating WA button ─────────── */
+.fab {
+  position: fixed; bottom: 22px; right: 22px; z-index: 900;
+  width: 58px; height: 58px; border-radius: 50%; background: var(--wa);
+  display: grid; place-items: center; box-shadow: 0 10px 30px -8px rgba(37,211,102,0.6);
+  text-decoration: none; transition: transform 0.25s;
+}
+.fab:hover { transform: scale(1.08); }
+.fab svg { width: 30px; height: 30px; fill: #fff; }
+.fab::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--wa);
+  animation: ring2 2.2s infinite;
+}
+@keyframes ring2 { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.5); opacity: 0; } }
+
+/* ─────────── Responsive ─────────── */
+@media (max-width: 920px) {
+  .demo-grid, .team-grid, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
+  .map-box { min-height: 320px; } .map-box iframe { min-height: 320px; }
+}
+@media (max-width: 760px) {
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--paper); border-bottom: 1px solid var(--line);
+    padding: 8px 0; transform: translateY(-130%); transition: transform 0.32s ease;
+    box-shadow: var(--shadow); pointer-events: none; opacity: 0;
+  }
+  .nav-links.open { transform: translateY(0); pointer-events: auto; opacity: 1; }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a:not(.nav-cta) { padding: 15px 28px; border-bottom: 1px solid var(--line); }
+  .nav-links a:not(.nav-cta)::after { display: none; }
+  .nav-cta { margin: 12px 28px; justify-content: center; }
+  .burger { display: block; }
+  .shift-tbl { grid-template-columns: 1fr; }
+  .shift-col.before { border-right: none; border-bottom: 1px solid rgba(247,245,239,0.14); }
+  .svc-item { grid-template-columns: 1fr; gap: 10px; }
+  .svc-num { font-size: 30px; }
+  .team-stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat { padding: 18px; } .stat-n { font-size: 32px; }
+  .section { padding: 70px 0; }
+  .emergency { font-size: 11px; gap: 9px; }
+  .emergency .hide-sm { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Emergency bar -->
+<div class="emergency">
+  <span class="pulse"></span>
+  <span><b>Urgencias 24/7</b> <span class="hide-sm">— ¿Tu mascota necesita atención ahora?</span></span>
+  <a href="https://wa.me/50200000000?text=Hola,%20tengo%20una%20emergencia%20con%20mi%20mascota" target="_blank" rel="noopener">Escribir al WhatsApp →</a>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="#top" class="logo">Animal<span class="ast">*</span>Life</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#atencion-ia">Atención IA</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/50200000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.7 1.1 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8.3-8 8.3z"/></svg>
+      Agendar
+    </a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="top">
+  <div class="hero-inner reveal">
+    <div class="kicker">Zona 10 · Medicina Especializada</div>
+    <h1 class="h1">La salud de tu mascota <span class="stroke">no tiene</span> horario de <span class="it">oficina.</span></h1>
+    <p class="hero-sub">
+      Dermatología veterinaria, grooming premium y pet shop en el corazón de la Zona 10.
+      Tu tranquilidad no se apaga a las 5:00 PM: nuestra atención por WhatsApp responde,
+      cotiza y agenda en segundos, las 24 horas.
+    </p>
+    <div class="hero-cta">
+      <a href="https://wa.me/50200000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" class="btn btn-pri">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Agendar en WhatsApp
+      </a>
+      <a href="#atencion-ia" class="btn btn-ghost">Ver cómo funciona</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        Dra. Johanna Motta · Medicina interna
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Respuesta en segundos, 24/7
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg>
+        Farmacia & Pet Shop integral
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Dermatología Veterinaria <i>✦</i> Estética Canina Avanzada <i>✦</i> Alimentos Premium <i>✦</i> Citas 24/7 <i>✦</i> Pet Shop Integral <i>✦</i> Urgencias Médicas <i>✦</i> Simparica · NexGard <i>✦</i></span>
+    <span>Dermatología Veterinaria <i>✦</i> Estética Canina Avanzada <i>✦</i> Alimentos Premium <i>✦</i> Citas 24/7 <i>✦</i> Pet Shop Integral <i>✦</i> Urgencias Médicas <i>✦</i> Simparica · NexGard <i>✦</i></span>
+  </div>
+</div>
+
+<!-- ★ Atención IA — interactive demo (the signature) -->
+<section class="demo section" id="atencion-ia">
+  <div class="wrap">
+    <div class="demo-grid">
+      <div class="demo-copy reveal">
+        <span class="kicker">Atención Inteligente</span>
+        <h2>No esperes horas. <span class="it">Pruébalo aquí mismo.</span></h2>
+        <p>Integramos un asistente con IA a nuestro WhatsApp. Cotiza, consulta el stock del pet shop y agenda tu cita al instante — incluso a las 11:00 PM o un domingo. Toca un botón en el chat y míralo responder.</p>
+        <div class="demo-feat">
+          <div class="demo-feat-item">
+            <div class="ic">🛁</div>
+            <div><b>Cotización por raza, al momento</b><p>Di la raza y recibe el rango de precio del grooming sin esperar.</p></div>
+          </div>
+          <div class="demo-feat-item">
+            <div class="ic">💊</div>
+            <div><b>Stock conectado en vivo</b><p>Pregunta por un medicamento o alimento y sabe si está disponible.</p></div>
+          </div>
+          <div class="demo-feat-item">
+            <div class="ic">🗓️</div>
+            <div><b>Triaje y agenda 24/7</b><p>Distingue urgencias de rutina y aparta tu espacio a cualquier hora.</p></div>
+          </div>
+        </div>
+        <p class="demo-note">// Demo interactivo · simula el flujo real del asistente</p>
+      </div>
+
+      <div class="reveal">
+        <div class="phone">
+          <div class="screen">
+            <div class="wa-head">
+              <div class="wa-avatar">A</div>
+              <div>
+                <div class="wa-name">Animal Life · Asistente</div>
+                <div class="wa-status"><span class="on"></span> en línea</div>
+              </div>
+            </div>
+            <div class="wa-body" id="chatBody" aria-live="polite"></div>
+            <div class="wa-replies" id="chatReplies"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section class="section" id="servicios">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">Pilares Médicos</span>
+      <h2>Servicios clínicos <span class="it">de alto nivel.</span></h2>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item reveal">
+        <div class="svc-num">01</div>
+        <div class="svc-title"><h3>Hospital Veterinario</h3></div>
+        <div class="svc-detail">
+          <p>Liderados por la Dra. Johanna Motta, atendemos medicina interna, dermatología veterinaria y cirugía con estándares hospitalarios. Diagnóstico preciso, no suposiciones.</p>
+          <div class="chip">Dermatología</div><div class="chip">Cirugía Mayor</div><div class="chip">Laboratorio</div><div class="chip">Medicina Interna</div>
+        </div>
+      </div>
+      <div class="svc-item reveal">
+        <div class="svc-num">02</div>
+        <div class="svc-title"><h3>Estética y Grooming</h3></div>
+        <div class="svc-detail">
+          <p>No es solo un baño: es higiene clínica supervisada. Usamos productos dermatológicos que respetan el pH y cuidan la piel de tu mascota. Cotización inmediata por WhatsApp según la raza.</p>
+          <div class="chip">Cortes Especiales</div><div class="chip">Baños Medicados</div><div class="chip">Cuidado Dermatológico</div>
+        </div>
+      </div>
+      <div class="svc-item reveal">
+        <div class="svc-num">03</div>
+        <div class="svc-title"><h3>Farmacia & Pet Shop</h3></div>
+        <div class="svc-detail">
+          <div class="bot-status"><span class="dot"></span> Inventario conectado a IA</div>
+          <p>Medicamentos de prescripción, desparasitantes como Simparica y NexGard, y líneas de alimento medicado premium. Consulta disponibilidad antes de salir de casa.</p>
+          <div class="chip">Consultar Stock por WhatsApp</div><div class="chip">Alimento Premium</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Shift table -->
+<section class="shift section">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">El Cambio</span>
+      <h2>Antes esperabas. <span class="it">Ahora te responden.</span></h2>
+      <p>La misma clínica que conoces, con una capa de automatización que elimina la espera.</p>
+    </div>
+    <div class="shift-tbl reveal">
+      <div class="shift-col before">
+        <div class="shift-h">Atención tradicional</div>
+        <div class="shift-li"><span class="mk">×</span> Esperar horas para saber el precio del grooming.</div>
+        <div class="shift-li"><span class="mk">×</span> Escribir de noche y recibir respuesta al día siguiente.</div>
+        <div class="shift-li"><span class="mk">×</span> Ir a la clínica solo para ver si hay stock de alimento.</div>
+      </div>
+      <div class="shift-col after">
+        <div class="shift-h"><span class="it">La experiencia Animal Life</span></div>
+        <div class="shift-li"><span class="mk">→</span> Cotización instantánea automática según la raza.</div>
+        <div class="shift-li"><span class="mk">→</span> Triaje y agenda de citas a las 11:00 PM o domingos.</div>
+        <div class="shift-li"><span class="mk">→</span> Inventario del pet shop consultable directo en WhatsApp.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Equipo -->
+<section class="section" id="equipo">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">Quién te atiende</span>
+      <h2>Manos expertas, <span class="it">criterio clínico.</span></h2>
+    </div>
+    <div class="team-grid">
+      <div class="doc-card reveal">
+        <div class="doc-photo">JM</div>
+        <h3>Dra. Johanna Motta</h3>
+        <div class="doc-role">Dirección Médica</div>
+        <p>Especialista en medicina interna y dermatología veterinaria. Lidera el equipo clínico de Animal Life con un enfoque en diagnóstico responsable y trato cercano, tanto con la mascota como con su familia.</p>
+      </div>
+      <div class="team-stats reveal">
+        <div class="stat"><div class="stat-n">24/7</div><div class="stat-l">Atención y triaje por WhatsApp, todos los días.</div></div>
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Áreas integradas: hospital, estética y pet shop.</div></div>
+        <div class="stat"><div class="stat-n">Z.10</div><div class="stat-l">Ubicados en el corazón de la Zona 10.</div></div>
+        <div class="stat"><div class="stat-n">pH</div><div class="stat-l">Productos dermatológicos en cada grooming.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-tight">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que más nos <span class="it">preguntan.</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿De verdad responden de madrugada o en domingo? <span class="pm">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sí. El asistente de WhatsApp atiende 24/7: cotiza, responde dudas frecuentes y registra tu solicitud de cita a cualquier hora. Para urgencias médicas reales, te conecta de inmediato con el canal de emergencia.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Cómo agendo una cita? <span class="pm">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Escríbenos por WhatsApp y el asistente te guía paso a paso: tipo de consulta, mascota y horario disponible. También puedes tocar “Agendar” en la parte superior de esta página.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Atienden gatos y otras especies? <span class="pm">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Atendemos perros y gatos. Si tienes otra especie, escríbenos antes para confirmar disponibilidad del especialista adecuado para tu mascota.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Puedo consultar el precio del grooming sin ir a la clínica? <span class="pm">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Claro. El asistente te da un rango de precio según la raza y el tamaño al instante por WhatsApp, y de una vez puedes apartar tu cita de estética.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Tienen el medicamento o alimento que necesito? <span class="pm">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Nuestro pet shop está conectado al asistente, así que puedes preguntar por un producto específico —como Simparica o un alimento medicado— y confirmar disponibilidad antes de salir de casa.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section class="contact section" id="contacto">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">Visítanos / Escríbenos</span>
+      <h2>Estamos en la <span class="it">Zona 10.</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a class="info-block" href="https://wa.me/50200000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">
+          <div class="info-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+          <div>
+            <div class="info-label">WhatsApp · 24/7</div>
+            <div class="info-val">+502 0000-0000</div>
+            <div class="info-sub">Cotiza, agenda o consulta stock al instante.</div>
+          </div>
+        </a>
+        <div class="info-block">
+          <div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div>
+            <div class="info-label">Dirección</div>
+            <div class="info-val">18 Avenida A 20-23, Zona 10</div>
+            <div class="info-sub">Ciudad de Guatemala</div>
+          </div>
+        </div>
+        <div class="info-block" style="display:block;">
+          <div style="display:flex; gap:16px; align-items:flex-start; margin-bottom:10px;">
+            <div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div><div class="info-label">Horarios</div><div class="info-val">Clínica & Pet Shop</div></div>
+          </div>
+          <table class="hours-table">
+            <tr><td>Lunes a Viernes</td><td>8:00 – 19:00</td></tr>
+            <tr><td>Sábado</td><td>8:00 – 17:00</td></tr>
+            <tr><td>Domingo</td><td>9:00 – 13:00</td></tr>
+            <tr class="em"><td>Urgencias / Asistente</td><td>24 horas</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="map-box reveal">
+        <iframe
+          title="Ubicación Animal Life — Zona 10, Ciudad de Guatemala"
+          loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-90.5230%2C14.5840%2C-90.5020%2C14.5980&layer=mapnik&marker=14.5910%2C-90.5125">
+        </iframe>
+        <div class="map-pin-note">📍 Ubicación aproximada de Zona 10 · el pin exacto se ajusta con la dirección verificada</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo">Animal<span class="ast">*</span>Life</a>
+    <p class="f-addr">18 Avenida A 20-23, Zona 10, Ciudad de Guatemala</p>
+    <div class="f-credit">
+      © 2026 Hospital Veterinario Animal Life · Sitio y automatización IA por <a href="#">Nexo Digital</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="fab" href="https://wa.me/50200000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8.3-8 8.3zm4.5-6c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-.3-.2-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Mobile nav ---------- */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function () {
+    var open = navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  /* ---------- WhatsApp bot demo engine ---------- */
+  var body = document.getElementById('chatBody');
+  var replies = document.getElementById('chatReplies');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var locked = false;
+
+  function now() {
+    var d = new Date();
+    var h = d.getHours(), m = d.getMinutes();
+    var ap = h >= 12 ? 'PM' : 'AM'; var hh = h % 12 || 12;
+    return hh + ':' + (m < 10 ? '0' + m : m) + ' ' + ap;
+  }
+  function scroll() { body.scrollTop = body.scrollHeight; }
+
+  function addBubble(who, html) {
+    var b = document.createElement('div');
+    b.className = 'bubble ' + who;
+    b.innerHTML = html + '<span class="time">' + now() + '</span>';
+    body.appendChild(b); scroll();
+  }
+
+  function typing() {
+    var t = document.createElement('div');
+    t.className = 'typing'; t.id = '__typing';
+    t.innerHTML = '<span></span><span></span><span></span>';
+    body.appendChild(t); scroll();
+  }
+  function stopTyping() {
+    var t = document.getElementById('__typing'); if (t) t.remove();
+  }
+
+  function setReplies(list) {
+    replies.innerHTML = '';
+    list.forEach(function (r) {
+      var c = document.createElement('button');
+      c.className = 'chip-reply' + (r.muted ? ' muted' : '');
+      c.textContent = r.label;
+      c.addEventListener('click', function () { if (!locked) r.go(); });
+      replies.appendChild(c);
+    });
+  }
+
+  // play a sequence of bot bubbles with realistic typing pauses, then set next replies
+  function botSay(messages, nextReplies) {
+    locked = true; setReplies([]);
+    var i = 0;
+    function step() {
+      if (i >= messages.length) {
+        locked = false; setReplies(nextReplies); return;
+      }
+      typing();
+      var delay = reduce ? 250 : Math.min(1400, 500 + messages[i].length * 11);
+      setTimeout(function () {
+        stopTyping();
+        addBubble('bot', messages[i]);
+        i++;
+        setTimeout(step, reduce ? 120 : 380);
+      }, delay);
+    }
+    step();
+  }
+
+  function user(text, then) {
+    addBubble('user', text);
+    setTimeout(then, reduce ? 120 : 420);
+  }
+
+  /* ----- Conversation flows ----- */
+  var MAIN = [
+    { label: '🛁 Cotizar grooming', go: flowGroomingAsk },
+    { label: '💊 ¿Tienen Simparica?', go: flowStock },
+    { label: '🗓️ Agendar cita', go: flowAppt },
+    { label: '🚨 Emergencia', go: flowEmergency }
+  ];
+
+  function backChip() { return { label: '↩ Volver al inicio', muted: true, go: resetToMain }; }
+
+  function flowGroomingAsk() {
+    user('Cotizar grooming', function () {
+      botSay(
+        ['¡Hola! 🐾 Con gusto te ayudo con la estética. ¿De qué raza es tu peludo?'],
+        [
+          { label: 'Poodle', go: function () { quote('Poodle', 'Q180 – Q260'); } },
+          { label: 'Schnauzer', go: function () { quote('Schnauzer', 'Q170 – Q240'); } },
+          { label: 'Golden Retriever', go: function () { quote('Golden Retriever', 'Q280 – Q380'); } },
+          { label: 'Otra raza', go: function () { quote('tu mascota', 'Q150 – Q350'); } }
+        ]
+      );
+    });
+  }
+  function quote(breed, range) {
+    user(breed === 'tu mascota' ? 'Es otra raza' : breed, function () {
+      botSay(
+        ['Perfecto. Para <b>' + breed + '</b>, el grooming clínico (baño medicado, corte y cuidado de piel a pH adecuado) ronda <span class="price">' + range + '</span> según el estado del pelaje. ✂️',
+         '¿Quieres que te aparte un espacio esta semana?'],
+        [
+          { label: '✅ Sí, agendar', go: flowApptConfirm },
+          backChip()
+        ]
+      );
+    });
+  }
+
+  function flowStock() {
+    user('¿Tienen Simparica?', function () {
+      botSay(
+        ['Déjame revisar el inventario en vivo… 🔎'],
+        []
+      );
+      // second beat: result
+      setTimeout(function () {
+        botSay(
+          ['✅ Sí, tenemos <b>Simparica</b> en presentación para 10–20 kg, <span class="price">en stock</span>.',
+           'También manejamos NexGard y alimento medicado premium. ¿Te lo reservo o prefieres agendar una consulta antes?'],
+          [
+            { label: '📦 Reservar producto', go: function () {
+                user('Reservar producto', function () {
+                  botSay(['¡Listo! Lo dejo apartado a tu nombre. Pasa cuando gustes por la Zona 10 y te lo entregamos. 🛍️'], [backChip()]);
+                });
+              } },
+            { label: '🗓️ Agendar consulta', go: flowApptConfirm },
+            backChip()
+          ]
+        );
+      }, reduce ? 400 : 1600);
+    });
+  }
+
+  function flowAppt() {
+    user('Agendar cita', function () {
+      botSay(
+        ['¡Con gusto! 🩺 ¿Es una <b>urgencia</b> o una <b>consulta de rutina</b>?'],
+        [
+          { label: '🚨 Es urgencia', go: flowEmergency },
+          { label: '🩺 Consulta de rutina', go: flowApptConfirm },
+          backChip()
+        ]
+      );
+    });
+  }
+  function flowApptConfirm() {
+    user('Consulta de rutina', function () {
+      botSay(
+        ['Tengo espacios <b>mañana 10:30 AM</b> y <b>jueves 4:00 PM</b> con la Dra. Johanna Motta. ¿Cuál te acomoda?'],
+        [
+          { label: 'Mañana 10:30', go: function () { booked('mañana a las 10:30 AM'); } },
+          { label: 'Jueves 4:00', go: function () { booked('el jueves a las 4:00 PM'); } },
+          backChip()
+        ]
+      );
+    });
+  }
+  function booked(when) {
+    user('Me acomoda ' + when, function () {
+      botSay(
+        ['¡Agendado! 🎉 Tu cita queda confirmada para <b>' + when + '</b>. Te enviaré un recordatorio por aquí.',
+         '¿Algo más en lo que te pueda ayudar?'],
+        [backChip()]
+      );
+    });
+  }
+
+  function flowEmergency() {
+    user('🚨 Emergencia', function () {
+      botSay(
+        ['Entendido, vamos a actuar rápido. 🚑 Mantén a tu mascota tranquila y abrigada.',
+         'Te estoy conectando ahora mismo con el <b>médico de turno</b>. Si hay sangrado o dificultad para respirar, ven de inmediato a la clínica en Zona 10.'],
+        [
+          { label: '📞 Llamar a la clínica', go: function () {
+              user('Llamar a la clínica', function () {
+                botSay(['Marcando con el equipo de urgencias… te esperamos. Vienes en camino y nosotros preparamos todo. 💚'], [backChip()]);
+              });
+            } },
+          backChip()
+        ]
+      );
+    });
+  }
+
+  function resetToMain() {
+    // soft reset — keep history, return to main menu
+    botSay(['¿En qué más te ayudo? 🐾'], MAIN);
+  }
+
+  /* ----- Kickoff ----- */
+  function start() {
+    botSay(
+      ['¡Hola! 👋 Soy el asistente de <b>Animal Life</b>. Estoy aquí 24/7.',
+       '¿Qué necesitas hoy? Toca una opción 👇'],
+      MAIN
+    );
+  }
+
+  // Start the demo when it scrolls into view (feels alive at the right moment)
+  var started = false;
+  var demoIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && !started) { started = true; start(); demoIO.disconnect(); }
+    });
+  }, { threshold: 0.35 });
+  demoIO.observe(document.querySelector('.phone'));
+})();
+</script>
+</body>
+</html>
