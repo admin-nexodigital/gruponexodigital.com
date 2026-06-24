@@ -87,6 +87,136 @@ nav{
 @media (max-width:1000px){.hero-grid,.visual-grid,.bot-grid{grid-template-columns:1fr}.hero-copy h1{max-width:12ch}.visual-copy{position:relative;top:0}.phone-shell{margin-top:12px}.strategy-grid,.deliver-grid,.location-grid{grid-template-columns:1fr 1fr}.roadmap{grid-template-columns:1fr 1fr}.cal-row{grid-template-columns:1fr}.cal-arrow{transform:rotate(90deg)}}
 @media (max-width:760px){nav{height:68px}.nav-links{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;background:rgba(233,224,211,.98);border-bottom:1px solid var(--line);box-shadow:var(--shadow-soft);padding:8px 0;transform:translateY(-130%);opacity:0;pointer-events:none;transition:.25s}.nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}.nav-links a{padding:14px 28px;border-bottom:1px solid var(--line)}.nav-cta{margin:10px 28px;text-align:center;border-bottom:none!important}.burger{display:block}.hero{padding:58px 0 55px}.hero-grid{gap:36px}.logo-txt span{display:none}.mark{font-size:50px}.phone-screen{height:590px}.section{padding:72px 0}.section-sm{padding:60px 0}.post-grid,.strategy-grid,.deliver-grid,.location-grid,.roadmap,.compare-grid{grid-template-columns:1fr}.compare-col:first-child{border-right:none;border-bottom:1px solid var(--line)}.proposal-bar{font-size:11px}.shead.center{text-align:left}.post-card{transform:none!important}}@media (max-width:420px){.wrap,.mini-wrap{padding:0 18px}nav{padding:0 18px}.hero-copy h1{font-size:46px}.phone-shell{width:100%}.bubble{font-size:12.6px}.reply{font-size:11px;padding:7px 9px}.hero-actions{flex-direction:column;align-items:stretch}.btn{width:100%}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+
+/* ─────────────────────────────────────────────
+   MOBILE POLISH PATCH
+   Fixes iPhone menu overlay, CTA overlap, viewport spacing and small-screen readability.
+───────────────────────────────────────────── */
+@media (max-width: 760px){
+  html, body{ width:100%; max-width:100%; overflow-x:hidden; }
+
+  nav{
+    height:72px;
+    padding:0 20px;
+    background:rgba(233,224,211,.97);
+    -webkit-backdrop-filter:blur(16px) saturate(1.1);
+    backdrop-filter:blur(16px) saturate(1.1);
+  }
+
+  .logo{ gap:10px; min-width:0; }
+  .mark{ font-size:48px; }
+  .logo-txt b{ font-size:15px; }
+
+  /* Turn the mobile nav into a real floating drawer instead of a transparent layer over content */
+  .nav-links{
+    position:fixed !important;
+    top:calc(72px + env(safe-area-inset-top, 0px)) !important;
+    left:14px !important;
+    right:14px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:4px !important;
+    align-items:stretch !important;
+    padding:12px !important;
+    max-height:calc(100dvh - 92px);
+    overflow-y:auto;
+    background:var(--paper) !important;
+    border:1px solid rgba(42,33,30,.12) !important;
+    border-radius:24px !important;
+    box-shadow:0 24px 60px -34px rgba(42,33,30,.72) !important;
+    transform:translateY(-10px) scale(.98) !important;
+    opacity:0 !important;
+    visibility:hidden;
+    pointer-events:none !important;
+  }
+
+  .nav-links.open{
+    transform:translateY(0) scale(1) !important;
+    opacity:1 !important;
+    visibility:visible;
+    pointer-events:auto !important;
+  }
+
+  .nav-links li{ list-style:none; display:block; }
+
+  .nav-links a:not(.nav-cta){
+    display:flex !important;
+    align-items:center;
+    min-height:46px;
+    padding:12px 16px !important;
+    border-bottom:0 !important;
+    border-radius:16px;
+    color:var(--ink) !important;
+    background:transparent;
+  }
+
+  .nav-links a:not(.nav-cta):hover,
+  .nav-links a:not(.nav-cta):focus-visible{
+    background:rgba(42,33,30,.055);
+  }
+
+  .nav-cta{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:52px;
+    margin:8px 0 0 !important;
+    padding:14px 16px !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:var(--ink) !important;
+    color:var(--paper) !important;
+    box-shadow:none !important;
+  }
+
+  .burger{ display:block; position:relative; z-index:2; }
+  .burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .burger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  body.menu-open{ overflow:hidden; }
+
+  .hero{ padding:48px 0 54px; }
+  .hero-grid{ gap:34px; }
+  .hero-copy h1{ line-height:1; }
+  .hero-copy p{ font-size:17px; line-height:1.55; }
+  .hero-actions{ gap:10px; }
+
+  .phone-shell{
+    width:min(355px, 100%);
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .section{ padding:70px 0; }
+  .section-sm{ padding:58px 0; }
+  .shead{ margin-bottom:34px; }
+  .shead h2{ line-height:1.04; }
+
+  .road, .strategy-card, .deliver, .loc-card, .flow-card{
+    border-radius:24px;
+  }
+
+  .float-wa{
+    right:18px;
+    bottom:calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 420px){
+  .wrap,.mini-wrap{ padding:0 20px; }
+  nav{ padding:0 20px; }
+  .proposal-bar{ display:none; }
+  .hero-copy h1{ font-size:clamp(42px, 12vw, 50px); max-width:11.2ch; }
+  .shead h2{ font-size:clamp(31px, 10vw, 42px); }
+  .hero-copy p,.shead p{ font-size:16.5px; }
+  .btn{ width:100%; min-height:52px; padding:15px 18px; }
+  .phone-screen{ height:560px; }
+  .road{ padding-bottom:52px; }
+}
+
 </style>
 </head>
 <body>
@@ -303,8 +433,15 @@ nav{
   'use strict';
   var burger=document.getElementById('burger');
   var navLinks=document.getElementById('navLinks');
-  burger.addEventListener('click',function(){var open=navLinks.classList.toggle('open');burger.setAttribute('aria-expanded',String(open));});
-  navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open');burger.setAttribute('aria-expanded','false');});});
+  function setMenu(open){
+    navLinks.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  }
+  burger.addEventListener('click',function(){ setMenu(!navLinks.classList.contains('open')); });
+  navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ setMenu(false); });});
+  document.addEventListener('keydown',function(e){ if(e.key === 'Escape'){ setMenu(false); } });
+  document.addEventListener('click',function(e){ if(!e.target.closest('nav') && navLinks.classList.contains('open')){ setMenu(false); } });
 
   document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.parentElement;var open=item.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});});
   var reveal=document.querySelectorAll('.reveal');
