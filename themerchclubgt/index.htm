@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Propuesta Digital | The Merch Club GT x Grupo Nexo Digital</title>
+<meta name="description" content="Propuesta exclusiva de diseño web, Google Workspace y automatizaciones para The Merch Club GT." />
+<meta name="theme-color" content="#2300E6" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Propuesta Digital para The Merch Club GT" />
+<meta property="og:description" content="Diseño web, correo profesional @themerchclubgt.com y automatización de ventas." />
+<meta property="og:locale" content="es_GT" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #2300E6;
+  --blue-dark: #150099;
+  --blue-deep: #0D0066;
+  --yellow: #FFD000;
+  --yellow-hover: #E6B800;
+  --dark: #0B0C10;
+  --dark-card: #141622;
+  --dark-border: rgba(255, 255, 255, 0.12);
+  --paper: #F8F9FD;
+  --text-light: #FFFFFF;
+  --text-muted: #9EA5B8;
+  --shadow: 0 24px 60px -15px rgba(35, 0, 230, 0.4);
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--dark); -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--text-light);
+  background: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection { background: var(--yellow); color: var(--dark); }
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.mini-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: 'Bebas Neue', 'Plus Jakarta Sans', sans-serif; letter-spacing: 1px; font-weight: 400; }
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--yellow);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.kicker::before { content: ""; width: 16px; height: 2px; background: var(--yellow); }
+
+/* Pitch Top Banner */
+.pitch-bar {
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: var(--yellow);
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+.pitch-bar span.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 0 rgba(35, 0, 230, 0.7);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(35, 0, 230, 0); } }
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background: rgba(11, 12, 16, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--dark-border);
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--yellow);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--yellow);
+  box-shadow: 0 0 15px rgba(35, 0, 230, 0.5);
+}
+.logo-text b { display: block; font-size: 17px; font-weight: 800; letter-spacing: -0.5px; }
+.logo-text span { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
+
+.nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+.nav-links a { font-size: 14px; font-weight: 600; color: var(--text-muted); transition: .2s; }
+.nav-links a:hover { color: var(--text-light); }
+.nav-cta {
+  background: var(--yellow) !important;
+  color: var(--dark) !important;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 800 !important;
+  transition: transform .2s, background .2s !important;
+}
+.nav-cta:hover { transform: translateY(-2px); background: var(--yellow-hover) !important; }
+
+.burger { display: none; background: transparent; border: none; width: 42px; height: 42px; cursor: pointer; }
+.burger span { display: block; width: 22px; height: 2px; border-radius: 2px; background: var(--text-light); margin: 5px auto; transition: .25s; }
+
+/* Hero */
+.hero { position: relative; padding: 80px 0 60px; overflow: hidden; }
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -10vw;
+  top: -10vw;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(35, 0, 230, 0.25), transparent 70%);
+  pointer-events: none;
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+.hero-copy h1 { font-size: clamp(48px, 6vw, 84px); line-height: 0.95; margin-bottom: 20px; }
+.hero-copy h1 .highlight { color: var(--yellow); }
+.hero-copy p { font-size: clamp(16px, 1.8vw, 19px); color: var(--text-muted); max-width: 54ch; margin-bottom: 32px; }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  transition: .25s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--yellow); color: var(--dark); box-shadow: 0 10px 30px -10px rgba(255, 208, 0, 0.4); }
+.btn-primary:hover { transform: translateY(-3px); background: var(--yellow-hover); }
+.btn-blue { background: var(--blue); color: var(--text-light); box-shadow: var(--shadow); }
+.btn-blue:hover { transform: translateY(-3px); background: var(--blue-dark); }
+.btn-ghost { border: 1px solid var(--dark-border); background: rgba(255, 255, 255, 0.05); color: var(--text-light); }
+.btn-ghost:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--text-light); }
+
+.hero-visual { position: relative; }
+.preview-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.preview-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.badge-tag { background: rgba(35, 0, 230, 0.3); border: 1px solid var(--blue); color: #8F7CFF; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+.merch-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.merch-pill { background: rgba(255, 255, 255, 0.06); border: 1px solid var(--dark-border); padding: 8px 14px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+
+.email-box {
+  background: var(--blue-deep);
+  border: 1px dashed var(--yellow);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-top: 20px;
+}
+.email-box small { color: var(--yellow); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+.email-box b { display: block; font-size: 17px; color: #FFF; margin-top: 2px; font-family: monospace; }
+
+/* Section Styling */
+.section { padding: 90px 0; }
+.shead { max-width: 700px; margin-bottom: 48px; }
+.shead.center { margin: 0 auto 48px; text-align: center; }
+.shead h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1; margin-bottom: 16px; }
+.shead p { font-size: 18px; color: var(--text-muted); }
+
+/* Features Grid */
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feature-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .25s, border-color .25s;
+}
+.feature-card:hover { transform: translateY(-5px); border-color: var(--blue); }
+.feature-icon { width: 52px; height: 52px; border-radius: 16px; background: var(--blue); color: var(--yellow); display: grid; place-items: center; font-size: 24px; margin-bottom: 20px; }
+.feature-card h3 { font-size: 28px; margin-bottom: 10px; }
+.feature-card p { color: var(--text-muted); font-size: 14.5px; }
+
+/* Workspace Highlight Banner */
+.workspace-band {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-deep));
+  border: 1px solid var(--blue);
+  border-radius: 32px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+.workspace-band h2 { font-size: 42px; margin-bottom: 12px; }
+.workspace-band p { color: #C5CEE0; font-size: 16px; }
+.email-list { display: flex; flex-direction: column; gap: 12px; }
+.email-item {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: monospace;
+  font-size: 15px;
+}
+.email-item i { color: var(--yellow); }
+
+/* WhatsApp Bot Simulator */
+.bot-section { background: #0E0F17; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); }
+.bot-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 48px; align-items: center; }
+
+.phone-shell {
+  width: 350px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #000000;
+  border-radius: 42px;
+  padding: 10px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  border: 3px solid #222;
+}
+.phone-screen {
+  height: 560px;
+  border-radius: 32px;
+  background: #0B141A;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wa-head { background: #1F2C34; color: #E9EDEF; padding: 36px 16px 12px; display: flex; align-items: center; gap: 12px; }
+.wa-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--blue); color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 18px; display: grid; place-items: center; }
+.wa-name { font-weight: 700; font-size: 14px; }
+.wa-status { font-size: 10px; color: #8696A0; }
+.wa-body { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0); background-size: 12px 12px; }
+.bubble { max-width: 85%; padding: 10px 12px; border-radius: 12px; font-size: 13px; line-height: 1.4; }
+.bubble.bot { align-self: flex-start; background: #202C33; color: #E9EDEF; border-top-left-radius: 2px; }
+.bubble.user { align-self: flex-end; background: #005C4B; color: #E9EDEF; border-top-right-radius: 2px; }
+.wa-replies { padding: 10px; background: #1F2C34; display: flex; flex-wrap: wrap; gap: 6px; }
+.reply { background: #2A3942; color: #00A884; border: 1px solid #3B4A54; border-radius: 999px; padding: 6px 12px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.reply:hover { background: #00A884; color: #FFF; }
+
+/* Calendar CTA Band */
+.cta-band {
+  background: linear-gradient(180deg, var(--dark), var(--blue-deep));
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+.cta-card {
+  background: var(--dark-card);
+  border: 2px solid var(--yellow);
+  border-radius: 32px;
+  padding: 56px 32px;
+  box-shadow: 0 0 50px rgba(255, 208, 0, 0.15);
+}
+.cta-card h2 { font-size: clamp(38px, 6vw, 72px); color: #FFF; margin-bottom: 16px; }
+.cta-card p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto 32px; }
+
+/* Footer */
+footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--dark-border); color: var(--text-muted); font-size: 13px; }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(20px); transition: 0.6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid, .bot-grid, .workspace-band { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .burger { display: block; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header aclaratorio de propuesta -->
+<div class="pitch-bar">
+  <span class="pulse"></span>
+  PROPUESTA DIGITAL CREADA POR GRUPO NEXO DIGITAL PARA THE MERCH CLUB GT
+</div>
+
+<!-- Navegación -->
+<nav>
+  <a class="logo" href="#top">
+    <div class="logo-badge">MC</div>
+    <div class="logo-text">
+      <b>The Merch Club GT</b>
+      <span>Propuesta Digital</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#solucion">Nuestra Propuesta</a></li>
+    <li><a href="#workspace">Google Workspace</a></li>
+    <li><a href="#bot">WhatsApp Bot</a></li>
+    <li><a class="nav-cta" href="https://calendar.app.google/DB27HcgD1BGG952J7" target="_blank" rel="noopener">Agendar Demostración</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="kicker">Tu visión. Nuestro MERCH.</span>
+        <h1>Lleva <span class="highlight">The Merch Club</span> al siguiente nivel.</h1>
+        <p>Preparamos esta propuesta para mostrarte cómo tu marca de gorras, t-shirts, sweaters y polos puede proyectar la máxima imagen profesional, automatizar ventas y agendar clientes en automático.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://calendar.app.google/DB27HcgD1BGG952J7" target="_blank" rel="noopener">Agendar Cita con Nosotros</a>
+          <a class="btn btn-ghost" href="#solucion">Ver Beneficios</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="preview-card">
+          <div class="preview-header">
+            <span class="badge-tag">Sitio Web + Correo + Bot</span>
+            <span style="font-size: 12px; color: var(--text-muted);">Guatemala 🇬🇹</span>
+          </div>
+          <h3 style="font-size: 32px; margin-bottom: 8px;">Catálogo Digital de Merch</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Tus productos destacados listos para solicitar cotizaciones en segundos:</p>
+          <div class="merch-pills">
+            <span class="merch-pill">🧢 Gorras Personalizadas</span>
+            <span class="merch-pill">👕 T-Shirts & Polos</span>
+            <span class="merch-pill">🧥 Sweaters & Hoodies</span>
+          </div>
+          <div class="email-box">
+            <small>Poder de marca con correo propio:</small>
+            <b>info@themerchclubgt.com</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Solución / Propuesta -->
+<section class="section" id="solucion">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">¿Qué ofrecemos?</span>
+      <h2>Todo lo que tu marca necesita para crecer.</h2>
+      <p>Diseñamos un ecosistema completo para que no solo vendas merch, sino que construyas una marca sólida en Guatemala.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div>
+          <div class="feature-icon">🌐</div>
+          <h3>Sitio Web / Catálogo</h3>
+          <p>Un diseño moderno que combina perfectamente con tus colores (Azul y Amarillo). Tus clientes podrán explorar tu merch y cotizar directamente.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div>
+          <div class="feature-icon">📧</div>
+          <h3>Google Workspace</h3>
+          <p>Dominio propio configurado con correos profesionales como <b>ventas@themerchclubgt.com</b> para dar máxima confianza a empresas y marcas.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div>
+          <div class="feature-icon">⚡</div>
+          <h3>Bot & Automación</h3>
+          <p>Responde solicitudes de cotizaciones de gorras o sweaters de forma automática en WhatsApp sin perder ningún cliente potencial.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner Google Workspace -->
+    <div class="workspace-band reveal" id="workspace">
+      <div>
+        <h2>Dominio + Google Workspace</h2>
+        <p>Olvida los correos `@gmail.com`. Transmite profesionalismo desde el primer contacto cuando envíes cotizaciones de merch corporativo.</p>
+      </div>
+      <div class="email-list">
+        <div class="email-item"><i>✓</i> pedidos@themerchclubgt.com</div>
+        <div class="email-item"><i>✓</i> ventas@themerchclubgt.com</div>
+        <div class="email-item"><i>✓</i> info@themerchclubgt.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo WhatsApp Bot -->
+<section class="bot-section section" id="bot">
+  <div class="wrap">
+    <div class="bot-grid">
+      <div class="bot-copy reveal">
+        <span class="kicker">Simulación Interactiva</span>
+        <h2>Automatización de cotizaciones por WhatsApp.</h2>
+        <p>Prueba cómo respondería tu propio bot de WhatsApp cuando un cliente pida precios de t-shirts, gorras o sweaters.</p>
+      </div>
+      <div class="reveal">
+        <div class="phone-shell">
+          <div class="phone-screen">
+            <div class="wa-head">
+              <div class="wa-avatar">MC</div>
+              <div>
+                <div class="wa-name">The Merch Club GT</div>
+                <div class="wa-status">En línea · Respuesta Inmediata</div>
+              </div>
+            </div>
+            <div class="wa-body" id="chatBody"></div>
+            <div class="wa-replies" id="chatReplies"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Final / Calendar -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <span class="kicker" style="justify-content: center;">¿Te gusta la propuesta?</span>
+      <h2>Platiquemos y hagámoslo realidad.</h2>
+      <p>Selecciona la fecha y hora que mejor te convenga en nuestro calendario para coordinar una llamada de 15 minutos.</p>
+      <a class="btn btn-primary" href="https://calendar.app.google/DB27HcgD1BGG952J7" target="_blank" rel="noopener">Agendar Cita en Mi Calendario</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Grupo Nexo Digital · Propuesta exclusiva creada para <b>The Merch Club GT</b>.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // Animation reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // WhatsApp Simulator
+  const body = document.getElementById('chatBody');
+  const replies = document.getElementById('chatReplies');
+  let locked = false;
+
+  function now() {
+    const d = new Date();
+    let h = d.getHours(), m = d.getMinutes();
+    const ap = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return h + ':' + (m < 10 ? '0' + m : m) + ' ' + ap;
+  }
+
+  function add(who, html) {
+    const b = document.createElement('div');
+    b.className = 'bubble ' + who;
+    b.innerHTML = html + '<span style="display:block;font-size:9px;color:rgba(255,255,255,0.4);text-align:right;margin-top:4px;">' + now() + '</span>';
+    body.appendChild(b);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function setReplies(list) {
+    replies.innerHTML = '';
+    list.forEach(r => {
+      const btn = document.createElement('button');
+      btn.className = 'reply';
+      btn.textContent = r.label;
+      btn.onclick = () => { if(!locked) r.go(); };
+      replies.appendChild(btn);
+    });
+  }
+
+  function bot(messages, next) {
+    locked = true;
+    setReplies([]);
+    let i = 0;
+    function step() {
+      if(i >= messages.length) {
+        locked = false;
+        setReplies(next);
+        return;
+      }
+      setTimeout(() => {
+        add('bot', messages[i]);
+        i++;
+        setTimeout(step, 400);
+      }, 600);
+    }
+    step();
+  }
+
+  function user(txt, then) {
+    add('user', txt);
+    setTimeout(then, 300);
+  }
+
+  const MAIN = [
+    { label: '🧢 Cotizar Gorras', go: () => user('Quiero cotizar gorras', () => bot(['¡Excelente! 🧢 Manejamos gorras bordadas y estampadas.', '¿Cuántas unidades necesitas aproximadamente?'], [
+      { label: '12 a 50 unidades', go: () => user('12 a 50 unidades', () => bot(['¡Perfecto! Te enviamos la tabla de precios al correo.', '¿Te gustaría agendar una llamada con nuestro equipo?'], CAL_LINK)) },
+      { label: '50+ unidades', go: () => user('Más de 50 unidades', () => bot(['¡Genial! Aplicas a descuento mayorista.', '¿Te gustaría agendar una llamada con nuestro equipo?'], CAL_LINK)) }
+    ])) },
+    { label: '🧥 Ver Sweaters / Polos', go: () => user('Quiero ver Sweaters y Polos', () => bot(['Ofrecemos Sweaters, Hoodies y Polo Shirts de alta calidad con tu logo impreso o bordado.', '¿Quieres agendar una demo con Nexo Digital?'], CAL_LINK)) },
+    { label: '📅 Agendar Reunión', go: () => user('Quiero agendar una llamada', () => bot(['Puedes agendar una sesión en nuestro calendario en el siguiente enlace:'], CAL_LINK)) }
+  ];
+
+  const CAL_LINK = [
+    { label: '📅 Abrir Calendario', go: () => window.open('https://calendar.app.google/DB27HcgD1BGG952J7', '_blank') }
+  ];
+
+  // Start chatbot simulation on load
+  setTimeout(() => {
+    bot([
+      '¡Hola! 👋 Bienvenidos a <b>The Merch Club GT</b>.',
+      '¿En qué te podemos ayudar hoy?'
+    ], MAIN);
+  }, 800);
+
+})();
+</script>
+</body>
+</html>
