@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Propuesta Digital de Lujo | Ziza Flowers GT x Grupo Nexo Digital</title>
+<meta name="description" content="Propuesta exclusiva de diseño web de lujo y automatizaciones para Ziza Flowers GT, 20 años creando experiencias inolvidables." />
+<meta name="theme-color" content="#000000" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Propuesta Digital para Ziza Flowers GT" />
+<meta property="og:description" content="Diseño web de lujo, correo profesional @zizaflowers.com y automatización de cotizaciones de bodas." />
+<meta property="og:locale" content="es_GT" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #000000;
+  --dark: #0A0A0A;
+  --dark-card: #141414;
+  --dark-border: rgba(212, 175, 55, 0.1);
+  --gold: #D4AF37; /* Dorado metálico principal */
+  --gold-vibrant: #FFD700; /* Dorado brillante accent */
+  --gold-deep: #B38F1F;
+  --gold-text: #E5C369;
+  --text-light: #FFFFFF;
+  --text-muted: #A3A3A3;
+  --radius: 8px;
+  --shadow: 0 20px 50px -10px rgba(212, 175, 55, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--black); -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: var(--text-light);
+  background: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Texture overlay (lino) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h40v40H40V0zM0 40h40v40H0V40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+::selection { background: var(--gold); color: var(--black); }
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.mini-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', 'Poppins', serif; font-weight: 300; letter-spacing: -0.5px; }
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.kicker::before { content: ""; width: 24px; height: 1px; background: var(--gold); }
+
+/* Pitch Top Banner */
+.pitch-bar {
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: var(--dark-card);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid var(--dark-border);
+}
+.pitch-bar span.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-vibrant);
+  box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(255, 215, 0, 0); } }
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--dark-border);
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-badge {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: var(--gold);
+}
+.logo-badge svg { fill: none; stroke: var(--gold); stroke-width: 1.5; }
+.logo-text b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; letter-spacing: -0.5px; }
+.logo-text span { font-size: 11px; color: var(--gold-text); text-transform: uppercase; letter-spacing: 1.5px; }
+
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); transition: .2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  transition: transform .2s, background .2s !important;
+}
+.nav-cta:hover { transform: translateY(-2px); background: var(--gold-deep) !important; }
+
+/* Hero */
+.hero { position: relative; padding: 120px 0 80px; overflow: hidden; background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.08), transparent 50%); }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="%23000" /><circle cx="50" cy="50" r="1" fill="%23333" /></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+.hero-copy h1 { font-size: clamp(48px, 6vw, 84px); line-height: 0.95; margin-bottom: 20px; color: var(--text-light); }
+.hero-copy h1 .highlight { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--gold); display: block; }
+.hero-copy h1 .highlight-serif { color: #FFF; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 0.75em;}
+.hero-copy p { font-size: clamp(16px, 1.8vw, 19px); color: var(--text-muted); max-width: 52ch; margin-bottom: 36px; font-weight: 300; }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .25s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--gold); color: var(--black); box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.5); }
+.btn-primary:hover { transform: translateY(-3px); background: var(--gold-vibrant); }
+.btn-gold-border { border: 1px solid var(--gold); background: transparent; color: var(--gold); }
+.btn-gold-border:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold-vibrant); color: var(--gold-vibrant); }
+
+.hero-visual { position: relative; }
+.preview-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 0 100px -10px rgba(0,0,0,0.8), var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+/* Recreación del logo ZA */
+.demo-logo {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 10%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-text);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 150px;
+  font-weight: 300;
+  opacity: 0.15;
+}
+
+.preview-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; position: relative; z-index: 2; }
+.badge-tag { background: rgba(212, 175, 55, 0.15); border: 1px solid var(--gold); color: var(--gold-text); padding: 8px 16px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+.event-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; position: relative; z-index: 2;}
+.event-pill { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.1); padding: 8px 14px; border-radius: var(--radius); font-size: 13px; font-weight: 500; color: #FFF; }
+
+.workspace-preview {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px dashed var(--dark-border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-top: 24px;
+  position: relative; z-index: 2;
+}
+.workspace-preview small { color: var(--gold-text); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+.workspace-preview b { display: block; font-size: 16px; color: #FFF; margin-top: 2px; font-weight: 300; font-family: monospace; }
+
+/* Section Styling */
+.section { padding: 100px 0; }
+.shead { max-width: 700px; margin-bottom: 56px; }
+.shead.center { margin: 0 auto 56px; text-align: center; }
+.shead h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1; margin-bottom: 16px; color: var(--text-light); }
+.shead h2 .gold { color: var(--gold); font-weight: 600;}
+.shead p { font-size: 18px; color: var(--text-muted); font-weight: 300; }
+
+/* Features Grid */
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.feature-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.feature-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: 0 20px 60px -10px rgba(212, 175, 55, 0.2); }
+.feature-icon { width: 48px; height: 48px; border-radius: var(--radius); background: transparent; color: var(--gold); border: 1px solid var(--gold); display: grid; place-items: center; font-size: 22px; margin-bottom: 24px; }
+.feature-card h3 { font-size: 24px; font-family: 'Poppins', sans-serif; font-weight: 600; margin-bottom: 10px; color: var(--text-light); }
+.feature-card p { color: var(--text-muted); font-size: 14px; font-weight: 300; line-height: 1.6; }
+
+/* Workspace Highlight Banner */
+.workspace-band {
+  background: radial-gradient(circle at 10% 10%, rgba(212, 175, 55, 0.15), transparent 60%);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 60px;
+  box-shadow: var(--shadow);
+}
+.workspace-band h2 { font-size: 42px; margin-bottom: 12px; font-weight: 500; }
+.workspace-band p { color: #BBB; font-size: 16px; font-weight: 300; }
+.email-list { display: flex; flex-direction: column; gap: 14px; }
+.email-item {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: monospace;
+  font-size: 15px;
+  color: #DDD;
+}
+.email-item i { color: var(--gold-vibrant); font-size: 12px;}
+
+/* WhatsApp Bot Simulator */
+.bot-section { background: var(--dark); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); }
+.bot-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 60px; align-items: center; }
+
+.phone-shell {
+  width: 350px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #000000;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.9), var(--shadow);
+  border: 3px solid #222;
+}
+.phone-screen {
+  height: 560px;
+  border-radius: 30px;
+  background: #0B141A;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wa-head { background: #1F2C34; color: #E9EDEF; padding: 36px 16px 12px; display: flex; align-items: center; gap: 12px; }
+.wa-avatar { width: 36px; height: 36px; border-radius: 50%; background: #000; color: var(--gold); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300;}
+.wa-avatar svg { fill: none; stroke: var(--gold); stroke-width: 1; width: 22px; height: 22px; }
+.wa-name { font-weight: 600; font-size: 14px; font-family: 'Poppins', sans-serif; }
+.wa-status { font-size: 11px; color: #8696A0; }
+.wa-body { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 0); background-size: 12px 12px; }
+.bubble { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 13px; line-height: 1.4; font-weight: 300;}
+.bubble.bot { align-self: flex-start; background: #202C33; color: #E9EDEF; border-top-left-radius: 2px; }
+.bubble.user { align-self: flex-end; background: #005C4B; color: #E9EDEF; border-top-right-radius: 2px; }
+.wa-replies { padding: 12px; background: #1F2C34; display: flex; flex-wrap: wrap; gap: 7px; border-top: 1px solid rgba(255,255,255,0.05); }
+.reply { background: transparent; color: #00A884; border: 1px solid #3B4A54; border-radius: 999px; padding: 7px 14px; font-size: 12px; font-weight: 600; cursor: pointer; transition: .2s; }
+.reply:hover { background: rgba(0, 168, 132, 0.1); border-color: #00A884; }
+
+/* Calendar CTA Band */
+.cta-band {
+  background: linear-gradient(180deg, var(--black), var(--dark-card));
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+.cta-band::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 40%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="%23000000" /><circle cx="50" cy="50" r="1" fill="%23d4af37" /></svg>');
+  opacity: 0.1;
+  pointer-events: none;
+}
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--dark-card);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 60px 40px;
+  box-shadow: 0 0 80px rgba(212, 175, 55, 0.1);
+}
+.cta-card h2 { font-size: clamp(38px, 6vw, 72px); color: #FFF; margin-bottom: 16px; font-weight: 300; }
+.cta-card h2 .gold { color: var(--gold); font-weight: 600;}
+.cta-card p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto 36px; font-weight: 300; }
+
+/* Footer */
+footer { padding: 48px 0; text-align: center; border-top: 1px solid var(--dark-border); color: var(--text-muted); font-size: 13px; font-weight: 300; }
+footer b { color: var(--gold-text); font-weight: 600;}
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(20px); transition: 0.6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid, .bot-grid, .workspace-band { grid-template-columns: 1fr; gap: 40px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .navbar { padding: 0 20px; }
+  .workspace-band { padding: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header aclaratorio de propuesta -->
+<div class="pitch-bar">
+  <span class="pulse"></span>
+  PROPUESTA DIGITAL EXCLUSIVA CREADA POR GRUPO NEXO DIGITAL PARA ZIZA FLOWERS GT
+</div>
+
+<!-- Navegación -->
+<nav>
+  <a class="logo" href="#top">
+    <div class="logo-badge">
+        <svg viewBox="0 0 100 100" width="100%" height="100%"><path d="M50 5 L95 50 L50 95 L5 50 Z" /></svg>
+        <span style="position:absolute;font-weight:300;">ZA</span>
+    </div>
+    <div class="logo-text">
+      <b>Ziza Flowers</b>
+      <span>Casa Ziza</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#solucion">Nuestra Propuesta</a></li>
+    <li><a href="#workspace">Google Workspace</a></li>
+    <li><a href="#bot">WhatsApp Bot</a></li>
+    <li><a class="nav-cta" href="https://calendar.app.google/DB27HcgD1BGG952J7" target="_blank" rel="noopener">Agendar Demostración</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="kicker">20 años creando experiencias</span>
+        <h1>Eleva tu Presencia a la <span class="highlight">Altura</span><span class="highlight-serif"> de tus Eventos.</span></h1>
+        <p>Preparamos esta propuesta para **Ziza Flowers**, donde décadas de experiencia en lujo se convierten en una experiencia digital inolvidable.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://calendar.app.google/DB27HcgD1BGG952J7" target="_blank" rel="noopener">Agendar Cita en Mi Calendario</a>
+          <a class="btn btn-gold-border" href="#solucion">Ver Propuesta Web</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="preview-card">
+            <div class="demo-logo">ZA</div>
+          <div class="preview-header">
+            <span class="badge-tag">Sitio Web + Correo + Bot</span>
+            <span style="font-size: 11px; color: var(--text-muted); text-transform:uppercase;letter-spacing:1px;font-weight:600;">GUATEMALA</span>
+          </div>
+          <h3 style="font-size: 30px; margin-bottom: 8px; font-weight:300;">Casa Ziza Luxury Events</h3>
+          <p style="font-size: 14px; color: var(--text-muted); font-weight:300;">Decoración de Eventos y Wedding Planning.</p>
+          <div class="event-pills">
+            <span class="event-pill">Flores de Lujo</span>
+            <span class="event-pill">Bodas Grandes</span>
+            <span class="event-pill">Wedding Planner</span>
+            <span class="event-pill">15 Años</span>
+          </div>
+          <div class="workspace-preview">
+            <small>Poder de marca profesional:</small>
+            <b>eventos@zizaflowers.com</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Solución / Propuesta -->
+<section class="section" id="solucion">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">Tu Visión, Nuestra Ejecución</span>
+      <h2>Nuestra Propuesta de <span class="gold">Lujo Digital</span>.</h2>
+      <p>Unificamos tus 20 años de trayectoria en un ecosistema que proyecta opulencia y genera confianza inmediata.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div>
+          <div class="feature-icon">🌐</div>
+          <h3>Sitio Web de Lujo</h3>
+          <p>Un diseño sofisticado que combina tus colores (Negro y Dorado). Tus clientes podrán explorar tu portafolio de bodas con imágenes de alta resolución.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div>
+          <div class="feature-icon">📧</div>
+          <h3>Google Workspace</h3>
+          <p>Dominio propio configurado con correos profesionales como **bodas@zizaflowers.com** para máxima credibilidad.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div>
+          <div class="feature-icon">⚡</div>
+          <h3>Bot & Automatización</h3>
+          <p>Responde solicitudes de cotizaciones de eventos grandes de forma automática en WhatsApp sin perder ningún lead.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner Google Workspace -->
+    <div class="workspace-band reveal" id="workspace">
+      <div>
+        <h2>Dominio + Google Workspace</h2>
+        <p>Olvida los correos `@gmail.com` para siempre. Transmite profesionalismo desde el primer contacto con tus clientes de alto perfil.</p>
+      </div>
+      <div class="email-list">
+        <div class="email-item"><i>✓</i> eventos@zizaflowers.com</div>
+        <div class="email-item"><i>✓</i> planner@zizaflowers.com</div>
+        <div class="email-item"><i>✓</i> info@zizaflowers.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo WhatsApp Bot -->
+<section class="bot-section section" id="bot">
+  <div class="wrap">
+    <div class="bot-grid">
+      <div class="bot-copy reveal">
+        <span class="kicker">Simulación Interactiva</span>
+        <h2>Automatización de Cotizaciones de Bodas.</h2>
+        <p>Prueba cómo respondería tu propio bot de WhatsApp cuando un cliente pida precios para una decoración de boda o quince años.</p>
+      </div>
+      <div class="reveal">
+        <div class="phone-shell">
+          <div class="phone-screen">
+            <div class="wa-head">
+              <div class="wa-avatar">
+                <svg viewBox="0 0 100 100"><path d="M50 5 L95 50 L50 95 L5 50 Z" /></svg>
+                <span style="position:absolute;font-weight:300;">ZA</span>
+              </div>
+              <div>
+                <div class="wa-name">Casa Ziza Luxury Events</div>
+                <div class="wa-status">En línea · Respuesta Inmediata</div>
+              </div>
+            </div>
+            <div class="wa-body" id="chatBody"></div>
+            <div class="wa-replies" id="chatReplies"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Final / Calendar -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <span class="kicker" style="justify-content: center;">¿Te gusta la propuesta?</span>
+      <h2>Platiquemos y hagámoslo <span class="gold">Realidad</span>.</h2>
+      <p>Selecciona la fecha y hora que mejor te convenga en nuestro calendario para coordinar una llamada de 15 minutos.</p>
+      <a class="btn btn-primary" href="https://calendar.app.google/DB27HcgD1BGG952J7" target="_blank" rel="noopener">Agendar Cita en Mi Calendario</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Grupo Nexo Digital · Propuesta exclusiva creada para <b>Ziza Flowers / Casa Ziza</b>.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // Animation reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // WhatsApp Simulator
+  const body = document.getElementById('chatBody');
+  const replies = document.getElementById('chatReplies');
+  let locked = false;
+
+  function now() {
+    const d = new Date();
+    let h = d.getHours(), m = d.getMinutes();
+    const ap = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return h + ':' + (m < 10 ? '0' + m : m) + ' ' + ap;
+  }
+
+  function add(who, html) {
+    const b = document.createElement('div');
+    b.className = 'bubble ' + who;
+    b.innerHTML = html + '<span style="display:block;font-size:9px;color:rgba(255,255,255,0.4);text-align:right;margin-top:4px;">' + now() + '</span>';
+    body.appendChild(b);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function setReplies(list) {
+    replies.innerHTML = '';
+    list.forEach(r => {
+      const btn = document.createElement('button');
+      btn.className = 'reply';
+      btn.textContent = r.label;
+      btn.onclick = () => { if(!locked) r.go(); };
+      replies.appendChild(btn);
+    });
+  }
+
+  function bot(messages, next) {
+    locked = true;
+    setReplies([]);
+    let i = 0;
+    function step() {
+      if(i >= messages.length) {
+        locked = false;
+        setReplies(next);
+        return;
+      }
+      setTimeout(() => {
+        add('bot', messages[i]);
+        i++;
+        setTimeout(step, 500);
+      }, 700);
+    }
+    step();
+  }
+
+  function user(txt, then) {
+    add('user', txt);
+    setTimeout(then, 300);
+  }
+
+  const MAIN = [
+    { label: '💍 Cotizar Boda Grande', go: () => user('Quiero cotizar una boda', () => bot(['¡Excelente! 💐 Manejamos decoración de lujo.', '¿Aproximadamente cuántos invitados esperan?', 'Y si necesitan Wedding Planner?'], CAL_LINK)) },
+    { label: '📋 Servicios Wedding Planner', go: () => user('Quiero información de Wedding Planning', () => bot(['Ofrecemos servicios completos de Wedding Planning para bodas de lujo.', '¿Tienes una fecha estimada para el evento?'], CAL_LINK)) },
+    { label: '📅 Agendar Reunión', go: () => user('Quiero agendar una llamada', () => bot(['Puedes agendar una sesión en nuestro calendario en el siguiente enlace:'], CAL_LINK)) }
+  ];
+
+  const CAL_LINK = [
+    { label: '📅 Abrir Calendario', go: () => window.open('https://calendar.app.google/DB27HcgD1BGG952J7', '_blank') }
+  ];
+
+  // Start chatbot simulation on load
+  setTimeout(() => {
+    bot([
+      '¡Hola! 💐 Bienvenidos a **Casa Ziza Luxury Events**.',
+      '¿En qué podemos ayudarte hoy?'
+    ], MAIN);
+  }, 1000);
+
+})();
+</script>
+</body>
+</html>
