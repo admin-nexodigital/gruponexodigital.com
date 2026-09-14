@@ -31,12 +31,12 @@
   --radius: 8px;
   --shadow: 0 20px 50px -10px rgba(212, 175, 55, 0.15);
   
-  /* Asset URLs (placeholders for replacement) */
-  --logo-src: url('image_5.png');
-  --hero-decor-src: url('image_6.png');
-  --icon-web-src: url('image_7.png');
-  --icon-mail-src: url('image_8.png');
-  --icon-bot-src: url('image_9.png');
+  /* Rutas exactas de las imágenes subidas a GitHub */
+  --logo-src: url('images/IMG_0490.PNG');
+  --hero-decor-src: url('images/IMG_0491.PNG');
+  --icon-web-src: url('images/IMG_0493.PNG');
+  --icon-mail-src: url('images/IMG_0497.PNG');
+  --icon-bot-src: url('images/IMG_0498.PNG');
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -300,7 +300,12 @@ nav {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: var(--icon-web-src); /* Fallback */
 }
+.icon-1 { background-image: var(--icon-web-src); }
+.icon-2 { background-image: var(--icon-mail-src); }
+.icon-3 { background-image: var(--icon-bot-src); }
+
 .feature-card h3 { font-size: 24px; font-family: 'Poppins', sans-serif; font-weight: 600; margin-bottom: 10px; color: var(--text-light); }
 .feature-card p { color: var(--text-muted); font-size: 14px; font-weight: 300; line-height: 1.6; }
 
@@ -507,7 +512,7 @@ footer .gold-dot { display: inline-block; width: 8px; height: 8px; border-radius
       <div class="feature-card reveal">
         <div>
           <div class="feature-box">
-              <div class="feature-icon" style="background-image: var(--icon-web-src);"></div>
+              <div class="feature-icon icon-1"></div>
           </div>
           <h3>Sitio Web de Lujo</h3>
           <p>Un diseño sofisticado que combina tus colores (Negro y Dorado). Tus clientes podrán explorar tu portafolio de bodas con imágenes de alta resolución.</p>
@@ -516,7 +521,7 @@ footer .gold-dot { display: inline-block; width: 8px; height: 8px; border-radius
       <div class="feature-card reveal">
         <div>
           <div class="feature-box">
-              <div class="feature-icon" style="background-image: var(--icon-mail-src);"></div>
+              <div class="feature-icon icon-2"></div>
           </div>
           <h3>Google Workspace</h3>
           <p>Dominio propio configurado con correos profesionales como **bodas@zizaflowers.com** para máxima credibilidad.</p>
@@ -525,7 +530,7 @@ footer .gold-dot { display: inline-block; width: 8px; height: 8px; border-radius
       <div class="feature-card reveal">
         <div>
           <div class="feature-box">
-              <div class="feature-icon" style="background-image: var(--icon-bot-src);"></div>
+              <div class="feature-icon icon-3"></div>
           </div>
           <h3>WhatsApp Bot</h3>
           <p>Responde solicitudes de cotizaciones de eventos grandes de forma automática en WhatsApp sin perder ningún lead.</p>
