@@ -31,12 +31,12 @@
   --radius: 8px;
   --shadow: 0 20px 50px -10px rgba(212, 175, 55, 0.15);
   
-  /* Rutas exactas de las imágenes subidas a GitHub */
-  --logo-src: url('images/IMG_0490.PNG');
-  --hero-decor-src: url('images/IMG_0491.PNG');
-  --icon-web-src: url('images/IMG_0493.PNG');
-  --icon-mail-src: url('images/IMG_0497.PNG');
-  --icon-bot-src: url('images/IMG_0498.PNG');
+  /* Rutas exactas corregidas (sin la carpeta images/) */
+  --logo-src: url('IMG_0490.PNG');
+  --hero-decor-src: url('IMG_0491.PNG');
+  --icon-web-src: url('IMG_0493.PNG');
+  --icon-mail-src: url('IMG_0497.PNG');
+  --icon-bot-src: url('IMG_0498.PNG');
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -230,7 +230,7 @@ nav {
     width: 100%;
     height: 180px;
     background-color: var(--black);
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150"><rect width="200" height="150" fill="%230a0a0a" /><line x1="100" y1="10" x2="100" y2="140" stroke="%23333" stroke-width="1" /><path d="M50,130 C70,100 130,100 150,130 Q100,150 50,130 Z" fill="%23D4AF37" fill-opacity="0.1" stroke="%23D4AF37" stroke-width="1" /></svg>'); /* Placeholder portrait */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150"><rect width="200" height="150" fill="%230a0a0a" /><line x1="100" y1="10" x2="100" y2="140" stroke="%23333" stroke-width="1" /><path d="M50,130 C70,100 130,100 150,130 Q100,150 50,130 Z" fill="%23D4AF37" fill-opacity="0.1" stroke="%23D4AF37" stroke-width="1" /></svg>');
     background-size: cover;
     background-position: center;
     border-radius: var(--radius);
@@ -293,14 +293,14 @@ nav {
     border: 1px solid var(--gold);
     margin-bottom: 24px;
     box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.5);
+    overflow: hidden;
 }
 .feature-icon {
-    width: 48px;
-    height: 48px;
-    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: var(--icon-web-src); /* Fallback */
 }
 .icon-1 { background-image: var(--icon-web-src); }
 .icon-2 { background-image: var(--icon-mail-src); }
