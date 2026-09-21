@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Structured data: helps Google show the clinic in local results -->
+<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,7 +96,7 @@ h1, h2, h3 {
 }
 .kicker::before { content: ''; width: 16px; height: 1px; background: var(--amber); }
 
-/* ─────────── Emergency top bar ─────────── */
+/* Emergency top bar */
 .emergency {
   background: var(--ink); color: var(--paper);
   font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.4px;
@@ -115,7 +115,7 @@ h1, h2, h3 {
   100% { box-shadow: 0 0 0 0 rgba(219,124,42,0); }
 }
 
-/* ─────────── Nav ─────────── */
+/* Nav */
 nav {
   position: sticky; top: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between;
@@ -151,7 +151,7 @@ nav {
 .burger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: 0.3s; }
 .burger span + span { margin-top: 5px; }
 
-/* ─────────── Hero ─────────── */
+/* Hero */
 .hero { position: relative; padding: 110px 0 70px; }
 .hero-inner { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
 .h1 { font-size: clamp(44px, 7.4vw, 96px); max-width: 15ch; margin-bottom: 28px; font-weight: 500; }
@@ -176,7 +176,7 @@ nav {
 .trust-item svg { width: 17px; height: 17px; color: var(--emerald); flex-shrink: 0; }
 .trust-sep { width: 1px; height: 16px; background: var(--line-2); }
 
-/* ─────────── Ticker ─────────── */
+/* Ticker */
 .ticker {
   background: var(--ink); color: var(--paper); overflow: hidden; padding: 18px 0; margin-top: 10px;
 }
@@ -189,14 +189,14 @@ nav {
 .ticker-track i { color: var(--amber); font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
 @keyframes tick { to { transform: translateX(-50%); } }
 
-/* ─────────── Section shell ─────────── */
+/* Section shell */
 .section { padding: 100px 0; }
 .section-tight { padding: 70px 0; }
 .shead { margin-bottom: 56px; max-width: 760px; }
 .shead h2 { font-size: clamp(32px, 4.6vw, 58px); margin-bottom: 18px; }
 .shead p { color: var(--ink-soft); font-size: 18px; }
 
-/* ─────────── Bot demo ─────────── */
+/* Bot demo */
 .demo { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .demo-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
 .demo-copy h2 { font-size: clamp(30px, 4vw, 50px); margin-bottom: 20px; }
@@ -274,7 +274,7 @@ nav {
 .chip-reply.muted { color: var(--ink-soft); border-color: var(--line-2); }
 .chip-reply.muted:hover { background: var(--ink); color: #fff; }
 
-/* ─────────── Servicios ─────────── */
+/* Servicios */
 .svc-item {
   display: grid; grid-template-columns: 70px 1.3fr 2fr; gap: 28px;
   padding: 38px 0; border-top: 1px solid var(--line); align-items: start;
@@ -295,7 +295,7 @@ nav {
 .bot-status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--emerald-3); box-shadow: 0 0 8px var(--emerald-3); animation: blink2 2s infinite; }
 @keyframes blink2 { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-/* ─────────── Shift table ─────────── */
+/* Shift table */
 .shift { background: var(--ink); color: var(--paper); }
 .shift .shead h2 { color: var(--paper); }
 .shift .shead p { color: rgba(247,245,239,0.65); }
@@ -314,7 +314,7 @@ nav {
 .before .mk { color: rgba(247,245,239,0.4); }
 .after .mk { color: var(--amber); }
 
-/* ─────────── Equipo ─────────── */
+/* Equipo */
 .team-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center; }
 .doc-card {
   background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; padding: 40px;
@@ -337,7 +337,7 @@ nav {
 .stat-n { font-family: 'Fraunces', serif; font-size: 40px; color: var(--emerald); line-height: 1; margin-bottom: 8px; }
 .stat-l { font-size: 13.5px; color: var(--ink-soft); }
 
-/* ─────────── FAQ ─────────── */
+/* FAQ */
 .faq-grid { max-width: 800px; }
 .faq-item { border-top: 1px solid var(--line); }
 .faq-item:last-child { border-bottom: 1px solid var(--line); }
@@ -352,7 +352,7 @@ nav {
 .faq-a-inner { padding: 0 0 26px; color: var(--ink-soft); font-size: 16px; max-width: 64ch; }
 .faq-item.open .faq-a { max-height: 320px; }
 
-/* ─────────── Contacto ─────────── */
+/* Contacto */
 .contact { background: var(--paper-2); border-top: 1px solid var(--line); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 50px; align-items: stretch; }
 .contact-info { display: flex; flex-direction: column; gap: 22px; }
@@ -376,7 +376,7 @@ a.info-block:hover { border-color: var(--line-2); transform: translateY(-2px); b
 .map-box iframe { width: 100%; height: 100%; border: 0; min-height: 420px; filter: grayscale(0.25) contrast(1.05); }
 .map-pin-note { position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(20,32,28,0.9); color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; padding: 8px 12px; border-radius: 8px; letter-spacing: 0.3px; }
 
-/* ─────────── Footer ─────────── */
+/* Footer */
 footer { background: var(--ink); color: var(--paper); padding: 60px 0 36px; text-align: center; }
 footer .logo { color: var(--paper); margin-bottom: 14px; display: inline-flex; justify-content: center; }
 footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 28px; }
@@ -387,11 +387,11 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
 .f-credit a { color: var(--amber); text-decoration: none; }
 .f-credit a:hover { text-decoration: underline; }
 
-/* ─────────── Reveal on scroll ─────────── */
+/* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
-/* ─────────── Floating WA button ─────────── */
+/* Floating WA button */
 .fab {
   position: fixed; bottom: 22px; right: 22px; z-index: 900;
   width: 58px; height: 58px; border-radius: 50%; background: var(--wa);
@@ -406,7 +406,7 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
 }
 @keyframes ring2 { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.5); opacity: 0; } }
 
-/* ─────────── Responsive ─────────── */
+/* Responsive */
 @media (max-width: 920px) {
   .demo-grid, .team-grid, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
   .map-box { min-height: 320px; } .map-box iframe { min-height: 320px; }
@@ -513,7 +513,7 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
   </div>
 </div>
 
-<!-- ★ Atención IA — interactive demo -->
+<!-- Atención IA — demo -->
 <section class="demo section" id="atencion-ia">
   <div class="wrap">
     <div class="demo-grid">
@@ -580,8 +580,8 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
             Evaluación clínica general, diagnóstico dermatológico y seguimiento con la Dra. Johanna Motta.
           </p>
         </div>
-        <a href="https://docs.google.com/forms/d/1zKm_uRrNNqz8lgx2vbHxyw8KL7gJ6XzeHlt25FJFjOY/viewform" target="_blank" style="background: var(--paper); color: var(--ink); text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; padding: 14px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; display: block;">
-          Abrir Formulario
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/" target="_blank" style="background: var(--paper); color: var(--ink); text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; padding: 14px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; display: block;">
+          Abrir Calendario
         </a>
       </div>
 
@@ -594,8 +594,8 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
             Baños medicados, cortes de raza y cuidado dermatológico supervisado con productos de pH adecuado.
           </p>
         </div>
-        <a href="https://docs.google.com/forms/d/1zKm_uRrNNqz8lgx2vbHxyw8KL7gJ6XzeHlt25FJFjOY/viewform" target="_blank" style="background: var(--paper); color: var(--ink); text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; padding: 14px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; display: block;">
-          Abrir Formulario
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/" target="_blank" style="background: var(--paper); color: var(--ink); text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; padding: 14px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; display: block;">
+          Abrir Calendario
         </a>
       </div>
 
@@ -608,8 +608,8 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
             Aplicación de esquemas de vacunación, desparasitación interna/externa y chequeos rápidos.
           </p>
         </div>
-        <a href="https://docs.google.com/forms/d/1zKm_uRrNNqz8lgx2vbHxyw8KL7gJ6XzeHlt25FJFjOY/viewform" target="_blank" style="background: var(--paper); color: var(--ink); text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; padding: 14px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; display: block;">
-          Abrir Formulario
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/" target="_blank" style="background: var(--paper); color: var(--ink); text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; padding: 14px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; display: block;">
+          Abrir Calendario
         </a>
       </div>
 
@@ -806,7 +806,7 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
 (function () {
   'use strict';
 
-  /* ---------- Mobile nav ---------- */
+  /* Mobile nav */
   var burger = document.getElementById('burger');
   var navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', function () {
@@ -820,7 +820,7 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
     });
   });
 
-  /* ---------- FAQ accordion ---------- */
+  /* FAQ accordion */
   document.querySelectorAll('.faq-q').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var item = btn.parentElement;
@@ -829,13 +829,13 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
     });
   });
 
-  /* ---------- Scroll reveal ---------- */
+  /* Scroll reveal */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-  /* ---------- WhatsApp bot demo engine ---------- */
+  /* WhatsApp bot demo engine */
   var body = document.getElementById('chatBody');
   var replies = document.getElementById('chatReplies');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -901,7 +901,6 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
     setTimeout(then, reduce ? 120 : 420);
   }
 
-  /* ----- Conversation flows ----- */
   var MAIN = [
     { label: '🛁 Cotizar grooming', go: flowGroomingAsk },
     { label: '💊 ¿Tienen Simparica?', go: flowStock },
