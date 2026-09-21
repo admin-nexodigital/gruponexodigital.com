@@ -72,7 +72,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Fine paper grain — restrained */
 body::after {
   content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
   opacity: 0.04; mix-blend-mode: multiply;
@@ -197,7 +196,7 @@ nav {
 .shead h2 { font-size: clamp(32px, 4.6vw, 58px); margin-bottom: 18px; }
 .shead p { color: var(--ink-soft); font-size: 18px; }
 
-/* ─────────── ★ Bot demo (signature) ─────────── */
+/* ─────────── Bot demo ─────────── */
 .demo { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .demo-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
 .demo-copy h2 { font-size: clamp(30px, 4vw, 50px); margin-bottom: 20px; }
@@ -219,7 +218,7 @@ nav {
   box-shadow: var(--shadow), 0 0 0 1px rgba(0,0,0,0.06);
   position: relative;
 }
-.phone::before { /* notch */
+.phone::before {
   content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%);
   width: 120px; height: 24px; background: #0b0f0d; border-radius: 0 0 16px 16px; z-index: 5;
 }
@@ -227,7 +226,6 @@ nav {
   background: #E7DDD3; border-radius: 32px; overflow: hidden; height: 600px;
   display: flex; flex-direction: column; position: relative;
 }
-/* WA chat header */
 .wa-head {
   background: var(--emerald); color: #fff; padding: 38px 16px 12px; display: flex; align-items: center; gap: 12px;
 }
@@ -262,7 +260,7 @@ nav {
 .typing span:nth-child(2) { animation-delay: 0.2s; }
 .typing span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes blink { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
-/* quick replies */
+
 .wa-replies {
   padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 7px; background: #E7DDD3;
   border-top: 1px solid rgba(0,0,0,0.05);
@@ -515,7 +513,7 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
   </div>
 </div>
 
-<!-- ★ Atención IA — interactive demo (the signature) -->
+<!-- ★ Atención IA — interactive demo -->
 <section class="demo section" id="atencion-ia">
   <div class="wrap">
     <div class="demo-grid">
@@ -879,7 +877,6 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
     });
   }
 
-  // play a sequence of bot bubbles with realistic typing pauses, then set next replies
   function botSay(messages, nextReplies) {
     locked = true; setReplies([]);
     var i = 0;
@@ -946,7 +943,6 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
         ['Déjame revisar el inventario en vivo… 🔎'],
         []
       );
-      // second beat: result
       setTimeout(function () {
         botSay(
           ['✅ Sí, tenemos <b>Simparica</b> en presentación para 10–20 kg, <span class="price">en stock</span>.',
@@ -1017,11 +1013,9 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
   }
 
   function resetToMain() {
-    // soft reset — keep history, return to main menu
     botSay(['¿En qué más te ayudo? 🐾'], MAIN);
   }
 
-  /* ----- Kickoff ----- */
   function start() {
     botSay(
       ['¡Hola! 👋 Soy el asistente de <b>Animal Life</b>. Estoy aquí 24/7.',
@@ -1030,7 +1024,6 @@ footer .f-addr { font-size: 14px; color: rgba(247,245,239,0.7); margin-bottom: 2
     );
   }
 
-  // Start the demo when it scrolls into view (feels alive at the right moment)
   var started = false;
   var demoIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
