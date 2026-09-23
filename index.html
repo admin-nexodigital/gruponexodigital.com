@@ -286,30 +286,6 @@ section.blk{padding:130px 0;position:relative}
 .before .shift-li{color:var(--mute)}
 .after .shift-li{color:var(--ink)}
 
-/* ───── SERVICES (Numbered Editorial List) ───── */
-.svc-list{display:flex;flex-direction:column;border-top:1px solid var(--line-2)}
-.svc-item{
-  display:grid;grid-template-columns:90px 1.4fr 2fr;gap:32px;
-  padding:38px 0;border-bottom:1px solid var(--line-2);
-  align-items:start;transition:padding-left .3s;
-}
-.svc-item:hover{padding-left:14px}
-@media(max-width:880px){.svc-item{grid-template-columns:60px 1fr;gap:18px}.svc-detail{grid-column:2/3}}
-.svc-num{
-  font-family:'Fraunces',serif;font-style:italic;font-weight:400;
-  font-size:48px;color:var(--flame);line-height:1;letter-spacing:-.02em;
-  font-variation-settings:"opsz" 60,"SOFT" 60,"WONK" 1;
-}
-.svc-title h3{font-size:30px;letter-spacing:-.02em;margin-bottom:8px;font-weight:600}
-.svc-title .stag{font-size:13.5px;color:var(--mute);font-style:italic;font-family:'Fraunces',serif;font-variation-settings:"opsz" 24}
-.svc-detail p{color:var(--ink-2);font-size:15px;margin-bottom:18px;max-width:50ch}
-.svc-detail .chips{display:flex;flex-wrap:wrap;gap:7px}
-.svc-detail .chip{
-  font-family:'JetBrains Mono',monospace;font-size:11.5px;
-  padding:6px 13px;border-radius:999px;border:1px solid var(--line-2);
-  color:var(--ink-2);background:var(--cream);
-}
-
 /* ───── BOTS ───── */
 .bots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media(max-width:860px){.bots-grid{grid-template-columns:1fr}}
@@ -470,7 +446,6 @@ footer{padding:48px 0;background:var(--ink);color:var(--cream);border-top:1px so
     Nexo<span class="ast">·</span>Digital
   </a>
   <ul class="nav-links">
-    <li><a href="#servicios">Servicios</a></li>
     <li><a href="#prueba">Sistemas</a></li>
     <li><a href="#caso">Caso real</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -580,108 +555,8 @@ footer{padding:48px 0;background:var(--ink);color:var(--cream);border-top:1px so
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="blk" id="servicios" style="padding-top:0">
-  <div class="wrap">
-    <div class="shead rev">
-      <span class="kicker">Qué hacemos</span>
-      <h2>Cinco frentes. Una sola idea: <span class="it">que el sistema trabaje, no tú.</span></h2>
-      <p>No vendemos herramientas sueltas. Diseñamos, construimos y dejamos funcionando el sistema completo — y nos quedamos para que siga funcionando.</p>
-    </div>
-
-    <div class="svc-list rev">
-      <div class="svc-item">
-        <div class="svc-num">01</div>
-        <div class="svc-title">
-          <h3>Automatización con IA</h3>
-          <div class="stag">— el servicio insignia</div>
-        </div>
-        <div class="svc-detail">
-          <p>El corazón de Nexo. Construimos asistentes de IA que viven en WhatsApp, Telegram o tu propio servidor y ejecutan trabajo real — no demos, sistemas en producción.</p>
-          <div class="chips">
-            <span class="chip">Bot de ventas 24/7</span>
-            <span class="chip">Asistente Secretario</span>
-            <span class="chip">Resúmenes diarios</span>
-            <span class="chip">Apps Script</span>
-            <span class="chip">Agentes de monitoreo</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-num">02</div>
-        <div class="svc-title">
-          <h3>Inteligencia de datos</h3>
-          <div class="stag">— decisiones con cabeza fría</div>
-        </div>
-        <div class="svc-detail">
-          <p>Convertimos hojas caóticas en tableros que entiendes de un vistazo. Sin Excel infinitos, sin pestañas de pestañas.</p>
-          <div class="chips">
-            <span class="chip">Looker Studio</span>
-            <span class="chip">Dashboards en vivo</span>
-            <span class="chip">Auditoría de datos</span>
-            <span class="chip">Google Ads optimization</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-num">03</div>
-        <div class="svc-title">
-          <h3>Fundación digital</h3>
-          <div class="stag">— la base profesional</div>
-        </div>
-        <div class="svc-detail">
-          <p>Todo lo que necesitas para verte (y operar) en serio. Dominio, correo profesional, presencia local — montados como debe ser.</p>
-          <div class="chips">
-            <span class="chip">Google Workspace</span>
-            <span class="chip">Dominio + DNS</span>
-            <span class="chip">Google My Business</span>
-            <span class="chip">Landing pages</span>
-            <span class="chip">Sitios web</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-num">04</div>
-        <div class="svc-title">
-          <h3>Adopción de IA</h3>
-          <div class="stag">— que tu equipo use, no que tema</div>
-        </div>
-        <div class="svc-detail">
-          <p>Capacitación práctica con las herramientas que ya pagas. Tu equipo deja de tenerle miedo a la IA y empieza a usarla todos los días.</p>
-          <div class="chips">
-            <span class="chip">Entrenamiento Gemini</span>
-            <span class="chip">Talleres a la medida</span>
-            <span class="chip">Consultoría estratégica</span>
-            <span class="chip">Roadmap de IA</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-num">05</div>
-        <div class="svc-title">
-          <h3>Soporte continuo</h3>
-          <div class="stag">— no entregamos y desaparecemos</div>
-        </div>
-        <div class="svc-detail">
-          <p>Tus sistemas evolucionan con tu negocio. Monitoreamos, mantenemos y mejoramos para que sigan dando resultados.</p>
-          <div class="chips">
-            <span class="chip">Plan de cuidado</span>
-            <span class="chip">Monitoreo de bots</span>
-            <span class="chip">Mantenimiento</span>
-            <span class="chip">Desarrollo continuo</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- BOTS / PRUEBA -->
-<section class="blk" id="prueba" style="padding-top:0">
+<section class="blk" id="prueba">
   <div class="wrap">
     <div class="shead rev">
       <span class="kicker">Prueba, no promesas</span>
